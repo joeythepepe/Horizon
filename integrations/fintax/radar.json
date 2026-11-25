@@ -1,0 +1,88 @@
+{
+  "timezone": "Asia/Hong_Kong",
+  "window": {
+    "timezone": "Asia/Hong_Kong",
+    "monday_hours": 72,
+    "default_hours": 24
+  },
+  "output_base": "/workspace/fintax-content-314cf32d/horizon-runs",
+  "ledger_path": "/workspace/fintax-content-314cf32d/horizon-runs/ledger.json",
+  "limits": {
+    "max_items_per_feed": 3,
+    "max_items": 8,
+    "max_llm_calls": 8,
+    "feed_timeout_sec": 20,
+    "llm_timeout_sec": 45,
+    "max_tokens": 900,
+    "content_chars": 4000
+  },
+  "ai": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "delivery": {
+    "email": false,
+    "webhook": false,
+    "wechat": false,
+    "github_pages": false,
+    "x_twitter": false,
+    "hackernews": false,
+    "reddit": false,
+    "telegram": false,
+    "openbb": false
+  },
+  "sources": [
+    {
+      "name": "Google News CARF",
+      "profile": "fintax-timely",
+      "kind": "google_news",
+      "query": "\"Crypto-Asset Reporting Framework\" OR (CARF (crypto OR \"crypto-asset\") (tax OR OECD))"
+    },
+    {
+      "name": "Google News DAC8",
+      "profile": "fintax-timely",
+      "kind": "google_news",
+      "query": "DAC8 (crypto OR \"crypto-asset\" OR \"digital asset\") (tax OR reporting OR directive)"
+    },
+    {
+      "name": "Google News 1099-DA",
+      "profile": "fintax-timely",
+      "kind": "google_news",
+      "query": "\"1099-DA\" (IRS OR \"digital asset\" OR crypto)"
+    },
+    {
+      "name": "Google News CRS",
+      "profile": "fintax-timely",
+      "kind": "google_news",
+      "query": "(\"CRS 2.0\" OR \"Common Reporting Standard\") (crypto OR \"crypto-asset\" OR CARF)"
+    },
+    {
+      "name": "Google News HK SG tax authorities",
+      "profile": "fintax-timely",
+      "kind": "google_news",
+      "query": "(IRAS OR \"Inland Revenue Authority of Singapore\" OR (\"Inland Revenue Department\" (Hong Kong OR IRD))) (crypto OR \"digital asset\" OR \"virtual asset\") (tax OR reporting)"
+    },
+    {
+      "name": "Google News crypto accounting standards",
+      "profile": "fintax-deep",
+      "kind": "google_news",
+      "query": "(IFRS OR IASB OR FASB) (\"crypto-asset\" OR cryptocurrency OR \"digital asset\") (accounting OR standard)"
+    },
+    {
+      "name": "HMRC news",
+      "profile": "fintax-timely",
+      "kind": "official_rss",
+      "url": "https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=hm-revenue-customs"
+    },
+    {
+      "name": "EU Taxation and Customs Union news",
+      "profile": "fintax-timely",
+      "kind": "official_rss",
+      "url": "https://taxation-customs.ec.europa.eu/node/2/rss_en"
+    }
+  ]
+}

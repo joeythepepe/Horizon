@@ -23,6 +23,8 @@ rather than process the item with all of them.
 | `finance-news` | Markets, macroeconomics, company finance, and economically material policy | Summary and background; direct impact when useful |
 | `ai-creator` | AI developments with potential for content creation | Summary; timely hooks, content angles, and community discussion when useful |
 | `flightsim-news` | Consumer flight simulation: simulators, add-ons, hardware, online networks, and their communities | Concrete changes and necessary background, with what it means for simmers and community discussion when useful |
+| `fintax-timely` | Dated official crypto-asset tax reporting developments (CARF, DAC8, 1099-DA, CRS, TIN, self-certification, reporting XML) | Chinese candidate note: client question, impact, and relevance, with no web search |
+| `fintax-deep` | Accounting and compliance mechanisms for crypto-assets, stablecoins, RWA, and DeFi | Chinese candidate note grounded in the supplied item, with no web search |
 
 Start with a built-in profile, then adjust its prompts or blocks to match your reading needs.
 
