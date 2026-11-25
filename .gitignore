@@ -59,6 +59,10 @@ logs/*.log
 # uv
 .uv/
 
+# FinTax radar runs stay on the box
+fintax-content-*/
+horizon-runs/
+
 # todo
 todo.txt
 .ruff_cache

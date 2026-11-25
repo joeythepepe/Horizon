@@ -1,0 +1,40 @@
+{
+  "id": "fintax-timely",
+  "name": "FinTax timely official developments",
+  "display_names": {
+    "zh": "及时：官方进展"
+  },
+  "match": "match.md",
+  "analysis": "analysis.md",
+  "content": {
+    "analysis_max_chars": 4000,
+    "enrichment_max_chars": 4000,
+    "sampling": "prefix"
+  },
+  "enrichment": {
+    "prompt": "enrichment.md",
+    "blocks": [
+      {
+        "id": "summary",
+        "type": "section",
+        "tools": [],
+        "primary": true
+      },
+      {
+        "id": "client_question",
+        "type": "section",
+        "tools": []
+      },
+      {
+        "id": "impact",
+        "type": "section",
+        "tools": []
+      },
+      {
+        "id": "relevance",
+        "type": "section",
+        "tools": []
+      }
+    ]
+  }
+}
